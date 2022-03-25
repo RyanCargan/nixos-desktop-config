@@ -264,7 +264,7 @@ in
   # $ nix search wget
   # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   environment.systemPackages = with pkgs; [
-    vim wget firefox kate httrack silver-searcher btop postgresql_14 postgresql14Packages.postgis postgresql14Packages.timescaledb ccache fd ripgrep ripgrep-all git docker yt-dlp obs-studio obsidian gron go-org groff direnv tor-browser-bundle-bin elinks fbida texmacs ghostwriter ffmpeg paprefs gnome3.dconf gparted unetbootin audacity jdk emscripten wasmer nvidia-docker pyspread inkscape neovim calibre root sageWithDoc nyxt nomacs maim yacreader tigervnc aria ghostscript nix-du zgrviewer graphviz google-chrome
+    vim wget firefox kate httrack silver-searcher btop postgresql_14 postgresql14Packages.postgis postgresql14Packages.timescaledb ccache fd ripgrep ripgrep-all git docker yt-dlp obs-studio gron go-org groff direnv elinks fbida texmacs ghostwriter ffmpeg paprefs gnome3.dconf gparted unetbootin audacity jdk emscripten wasmer nvidia-docker pyspread inkscape neovim calibre root sageWithDoc nyxt nomacs maim yacreader tigervnc aria ghostscript nix-du zgrviewer graphviz google-chrome
 
     # Package packs
     RStudio-with-my-packages
@@ -320,7 +320,7 @@ in
     bintools-unwrapped # Tools for manipulating binaries (linker, assembler, etc.)
 
     # SDKs
-    cudnn_cudatoolkit_11_2 # NVIDIA CUDA Deep Neural Network library (CUDA 11.2 + cuDNN 8.1.1 for TensorFlow 2.7.0 compat)
+    #cudnn_cudatoolkit_11_2 # NVIDIA CUDA Deep Neural Network library (CUDA 11.2 + cuDNN 8.1.1 for TensorFlow 2.7.0 compat)
     git-lfs # Git extension for versioning large files
     gcc # GNU Compiler Collection, version 10.3.0 (wrapper script)
     gnumake # A tool to control the generation of non-source files from sources
@@ -432,7 +432,7 @@ in
       my-python-packages = python-packages: with python-packages; [
         requests
         psycopg2
-        tensorflowWithCuda
+        #tensorflowWithCuda
         flask flask_wtf flask_mail flask_login flask_assets flask-sslify flask-silk flask-restx flask-openid flask-cors flask-common flask-bcrypt flask-babel flask-api flask-admin flask_sqlalchemy flask_migrate
         fire
         typer
