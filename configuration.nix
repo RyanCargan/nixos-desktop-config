@@ -284,7 +284,9 @@ in
     # Web Dev
     unstable.deno
     unstable.flyctl
-    go_1_17
+    # go_1_17
+    unstable.go_1_18
+    sass
     ungoogled-chromium
 
     # VPS
@@ -401,7 +403,8 @@ in
     hwinfo # Hardware detection tool from openSUSE
     bat # A cat(1) clone with syntax highlighting and Git integration
     zip # Compressor/archiver for creating and modifying zipfiles
-
+    unrar
+    
     # DB utils
     dbeaver # Universal SQL Client for developers, DBA and analysts. Supports MySQL, PostgreSQL, MariaDB, SQLite, and more.
 
