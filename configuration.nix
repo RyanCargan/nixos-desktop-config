@@ -289,6 +289,9 @@ in
     sass
     ungoogled-chromium
 
+    #Sys Dev
+    nixos-option
+
     # VPS
     mosh
 
