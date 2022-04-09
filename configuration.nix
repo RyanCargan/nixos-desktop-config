@@ -270,7 +270,7 @@ in
     RStudio-with-my-packages
 
     # Flakes
-    inputs.blender.packages.x86_64-linux.blender_3_0
+    inputs.blender.packages.x86_64-linux.blender_3_1
     inputs.poetry2nix.packages.x86_64-linux.poetry2nix
 	  release2105.dos2unix
 	  # release2105.google-chrome
