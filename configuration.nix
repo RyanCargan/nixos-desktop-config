@@ -435,7 +435,8 @@ in
 
     # Java
     #jdk
-    oraclejdk8
+    #oraclejdk8
+    adoptopenjdk-hotspot-bin-16
     
     # Python 3
     (let
