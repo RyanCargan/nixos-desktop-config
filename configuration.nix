@@ -436,8 +436,9 @@ in
     # Java
     #jdk
     #oraclejdk8
-    adoptopenjdk-hotspot-bin-16
-    
+    #adoptopenjdk-hotspot-bin-16
+    adoptopenjdk-bin
+
     # Python 3
     (let
       my-python-packages = python-packages: with python-packages; [
