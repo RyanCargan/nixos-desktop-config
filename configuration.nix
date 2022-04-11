@@ -433,11 +433,9 @@ in
     # Android MTP
     jmtpfs
 
-    # Java
-    #jdk
-    #oraclejdk8
-    #adoptopenjdk-hotspot-bin-16
+    # JVM
     adoptopenjdk-bin
+    (sbt.override { jre = pkgs.adoptopenjdk-bin; })
 
     # Python 3
     (let
