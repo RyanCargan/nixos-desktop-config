@@ -289,6 +289,9 @@ in
     sass
     ungoogled-chromium
 
+    # Android Dev
+    android-studio
+
     #Sys Dev
     nixos-option
 
