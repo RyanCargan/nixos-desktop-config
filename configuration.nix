@@ -376,7 +376,10 @@ in
     # Emacs deps
     libtool
     libvterm-neovim
-    texlive.combined.scheme-full	
+    texlive.combined.scheme-full
+    mpg321
+    mpg123
+    mplayer
 
     # Sys utils
     st
