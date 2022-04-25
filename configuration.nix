@@ -278,6 +278,9 @@ in
     # Security
     clamav
 
+    # Comm utils
+    zoom-us
+
     # Editors
     apostrophe # Markdown
 
