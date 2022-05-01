@@ -295,6 +295,7 @@ in
     # Android Dev
     android-studio
     wmname # Java app GUI issue fix
+    android-tools
 
     #Sys Dev
     nixos-option
