@@ -479,6 +479,8 @@ in
         fastapi sqlalchemy sqlalchemy-utils sqlalchemy-migrate sqlalchemy-jsonfield sqlalchemy-i18n sqlalchemy-citext alembic ColanderAlchemy
         # General tools
         pipx
+        # Testing tools
+        pytest
       ];
       python-with-my-packages = python39.withPackages my-python-packages;
     in
