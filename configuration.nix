@@ -376,6 +376,7 @@ in
     xdotool
     libnotify
     dunst
+    mkvtoolnix
 
     # Emacs deps
     libtool
