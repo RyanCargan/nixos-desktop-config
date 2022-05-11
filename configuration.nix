@@ -339,6 +339,7 @@ in
     git-lfs # Git extension for versioning large files
     gcc # GNU Compiler Collection, version 10.3.0 (wrapper script)
     gnumake # A tool to control the generation of non-source files from sources
+    pkg-config
     mdk # GNU MIX Development Kit (MDK)
     racket # A programmable programming language
     mozart2 # An open source implementation of Oz 3
