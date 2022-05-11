@@ -334,6 +334,7 @@ in
 
     # SDKs
     cudatoolkit_11_2
+    cudnn_cudatoolkit_11_2
     #cudnn_cudatoolkit_11_2 # NVIDIA CUDA Deep Neural Network library (CUDA 11.2 + cuDNN 8.1.1 for TensorFlow 2.7.0 compat)
     git-lfs # Git extension for versioning large files
     gcc # GNU Compiler Collection, version 10.3.0 (wrapper script)
@@ -486,7 +487,7 @@ in
       ];
       python-with-my-packages = python39.withPackages my-python-packages;
     in
-    python-with-my-packages)
+      python-with-my-packages)
 
     # (let 
     #   my-python2-packages = python2-packages: with python2-packages; [ 
