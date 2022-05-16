@@ -275,6 +275,25 @@ in
 	  release2105.dos2unix
 	  # release2105.google-chrome
 
+    ## Language servers
+    # C/C++
+    ccls
+    # JavaScript/TypeScript
+    nodePackages.typescript
+    nodePackages.typescript-language-server
+    # Go
+    gopls
+    # Kotlin
+    # TODO
+    # SQL
+    sqls
+    # Nix
+    rnix-lsp
+    # Bash
+    nodePackages.bash-language-server
+    # CMake
+    cmake-language-server
+
     # Security
     clamav
 
@@ -518,6 +537,7 @@ in
     cppzmq
     uncrustify
     cmake
+    # cmakeWithGui
     ninja
     conan
 
