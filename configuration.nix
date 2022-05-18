@@ -204,6 +204,9 @@ in
   services.emacs.package = pkgs.emacsGcc;
   # services.emacs.enable = true; # Optional emacs daemon/server mode.
 
+  # D-Bus
+  services.dbus.packages = with pkgs; [ vscode-fhs ];
+
   # Overlay configuration
   nixpkgs.overlays = [
     (import (builtins.fetchGit {
@@ -542,7 +545,16 @@ in
     # cmakeWithGui
     ninja
     conan
+    # Clang
     clang_14
+    lldb_14
+    # llvmPackages_14.libcxx
+
+    # VS Code fixes
+    gnome.gnome-keyring
+    libgnome-keyring
+    libsecret
+    gnome.seahorse
 
     # Vulkan
     vulkan-tools
