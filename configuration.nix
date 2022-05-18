@@ -277,22 +277,24 @@ in
 
     ## Language servers
     # C/C++
-    ccls
+    #ccls
     # JavaScript/TypeScript
-    nodePackages.typescript
-    nodePackages.typescript-language-server
+    #nodePackages.typescript
+    #nodePackages.typescript-language-server
     # Go
-    gopls
+    #gopls
     # Kotlin
     # TODO
     # SQL
-    sqls
+    #sqls
     # Nix
-    rnix-lsp
+    #rnix-lsp
     # Bash
-    nodePackages.bash-language-server
+    #nodePackages.bash-language-server
     # CMake
-    cmake-language-server
+    #cmake-language-server
+    # CSS/SCSS
+    #nodePackages.vscode-css-languageserver-bin
 
     # Security
     clamav
@@ -540,6 +542,7 @@ in
     # cmakeWithGui
     ninja
     conan
+    clang_14
 
     # Vulkan
     vulkan-tools
