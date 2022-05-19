@@ -205,7 +205,8 @@ in
   # services.emacs.enable = true; # Optional emacs daemon/server mode.
 
   # D-Bus
-  services.dbus.packages = with pkgs; [ vscode-fhs ];
+  # services.dbus.packages = with pkgs; [ gnome-keyring ];
+  services.gnome.gnome-keyring.enable = true;
 
   # Overlay configuration
   nixpkgs.overlays = [
@@ -280,7 +281,7 @@ in
 
     ## Language servers
     # C/C++
-    #ccls
+    ccls
     # JavaScript/TypeScript
     #nodePackages.typescript
     #nodePackages.typescript-language-server
@@ -551,10 +552,10 @@ in
     # llvmPackages_14.libcxx
 
     # VS Code fixes
-    gnome.gnome-keyring
-    libgnome-keyring
-    libsecret
-    gnome.seahorse
+    #gnome.gnome-keyring
+    #libgnome-keyring
+    #libsecret
+    #gnome.seahorse
 
     # Vulkan
     vulkan-tools
