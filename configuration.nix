@@ -386,6 +386,7 @@ in
     # Desktop environment utils
     xfce.thunar
     xfce.thunar-volman
+    xfce.tumbler
     polkit_gnome
     pavucontrol
     dmenu
