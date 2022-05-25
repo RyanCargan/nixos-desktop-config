@@ -551,6 +551,8 @@ in
     clang_14
     lldb_14
     # llvmPackages_14.libcxx
+    valgrind
+    gdb
 
     # VS Code fixes
     #gnome.gnome-keyring
