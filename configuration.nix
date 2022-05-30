@@ -448,9 +448,15 @@ in
     bat # A cat(1) clone with syntax highlighting and Git integration
     zip # Compressor/archiver for creating and modifying zipfiles
     unrar
-    
+
+    # Terminals
+    hyper
+
     # DB utils
     dbeaver # Universal SQL Client for developers, DBA and analysts. Supports MySQL, PostgreSQL, MariaDB, SQLite, and more.
+
+    # GIS utils
+    qgis
 
     # KDE utils
     libsForQt5.ark # Archive manager
@@ -577,6 +583,9 @@ in
     # Coq
     coq
     coqPackages.mathcomp
+
+    # TLA+
+    tlaplusToolbox
 
     # GIMP
     gimp
