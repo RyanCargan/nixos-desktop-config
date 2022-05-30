@@ -327,6 +327,7 @@ in
 
     # VPS
     mosh
+    sshfs
 
     # Weird stuff
     eaglemode
