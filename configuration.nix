@@ -312,8 +312,8 @@ in
     # Web Dev
     unstable.deno
     unstable.flyctl
-    # go_1_17
-    unstable.go_1_18
+    go_1_17
+    #unstable.go_1_18
     sass
     ungoogled-chromium
 
