@@ -286,7 +286,7 @@ in
     #nodePackages.typescript
     #nodePackages.typescript-language-server
     # Go
-    gopls
+    #gopls
     go-outline
     # Kotlin
     # TODO
