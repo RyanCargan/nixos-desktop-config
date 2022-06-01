@@ -7,7 +7,7 @@ with pkgs;
 let
   system = "x86_64-linux";
   # R-with-my-packages = rWrapper.override{ packages = with rPackages; [ ggplot2 dplyr xts ]; };
-  RStudio-with-my-packages = rstudioWrapper.override{ packages = with rPackages; [ ggplot2 dplyr xts ]; };
+  # RStudio-with-my-packages = rstudioWrapper.override{ packages = with rPackages; [ ggplot2 dplyr xts ]; };
 in
 {
   imports =
@@ -232,8 +232,8 @@ in
             # sha256 = "1plzfi5l8zwgr8zfjmzilpv43n248n4178j98qdbwpgb4r793mdj";
             # url = "https://dwm.suckless.org/patches/systray/dwm-systray-6.0.diff";
             # sha256 = "1k95j0c9gzz15k0v307zlvkk3fbayb9kid68i27idawg2salrz54";
-           url = "https://dwm.suckless.org/patches/systray/dwm-systray-6.2.diff";
-           sha256 = "19m7s7wfqvw09z9zb3q9480n42xcsqjrxpkvqmmrw1z96d2nn3nn"; 
+           url = "https://dwm.suckless.org/patches/systray/dwm-systray-6.3.diff";
+           sha256 = "1plzfi5l8zwgr8zfjmzilpv43n248n4178j98qdbwpgb4r793mdj"; 
           })
           (super.fetchpatch {
            url = "https://dwm.suckless.org/patches/swaptags/dwm-swaptags-6.2.diff";
@@ -268,10 +268,10 @@ in
   # $ nix search wget
   # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   environment.systemPackages = with pkgs; [
-    vim wget firefox kate httrack silver-searcher btop postgresql_14 postgresql14Packages.postgis postgresql14Packages.timescaledb ccache fd ripgrep ripgrep-all git docker yt-dlp obs-studio gron go-org groff direnv elinks fbida texmacs ghostwriter ffmpeg paprefs gnome3.dconf gparted unetbootin audacity emscripten wasmer nvidia-docker pyspread inkscape neovim calibre root sageWithDoc nyxt nomacs maim yacreader tigervnc aria ghostscript nix-du zgrviewer graphviz google-chrome tor-browser-bundle-bin
+    vim wget firefox kate httrack silver-searcher btop postgresql_14 postgresql14Packages.postgis postgresql14Packages.timescaledb ccache fd ripgrep ripgrep-all git docker yt-dlp obs-studio gron go-org groff direnv elinks fbida texmacs ghostwriter ffmpeg paprefs gparted unetbootin audacity emscripten wasmer nvidia-docker pyspread inkscape neovim calibre root sageWithDoc nyxt nomacs maim yacreader tigervnc aria ghostscript nix-du zgrviewer graphviz google-chrome tor-browser-bundle-bin
 
     # Package packs
-    RStudio-with-my-packages
+    # RStudio-with-my-packages
 
     # Flakes
     inputs.blender.packages.x86_64-linux.blender_3_1
@@ -313,7 +313,8 @@ in
     # Web Dev
     unstable.deno
     unstable.flyctl
-    go_1_17
+    # go_1_17
+    go_1_18
     #unstable.go_1_18
     sass
     ungoogled-chromium
@@ -360,8 +361,10 @@ in
     bintools-unwrapped # Tools for manipulating binaries (linker, assembler, etc.)
 
     # SDKs
-    cudatoolkit_11_2
-    cudnn_cudatoolkit_11_2
+    #cudatoolkit_11_2
+    cudaPackages_11_2.cudatoolkit
+    #cudnn_cudatoolkit_11_2
+    cudaPackages_11_2.cudnn
     #cudnn_cudatoolkit_11_2 # NVIDIA CUDA Deep Neural Network library (CUDA 11.2 + cuDNN 8.1.1 for TensorFlow 2.7.0 compat)
     git-lfs # Git extension for versioning large files
     gcc # GNU Compiler Collection, version 10.3.0 (wrapper script)
@@ -369,9 +372,9 @@ in
     pkg-config
     mdk # GNU MIX Development Kit (MDK)
     racket # A programmable programming language
-    mozart2 # An open source implementation of Oz 3
+    # mozart2 # An open source implementation of Oz 3
     chicken # A portable compiler for the Scheme programming language
-    renpy # Ren'Py Visual Novel Engine
+    # renpy # Ren'Py Visual Novel Engine
     nwjs-sdk # An app runtime based on Chromium and node.js
 
     # Source code explorer & deps
