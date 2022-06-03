@@ -19,6 +19,8 @@ in
     package = pkgs.nix_2_4; # Potential attributes are nix_2_4 nixFlakes nixUnstable
     extraOptions = ''
       experimental-features = nix-command flakes
+      keep-outputs = true
+      keep-derivations = true
     '';
   };
 
@@ -258,10 +260,17 @@ in
         # postPatch = "${oa.postPatch}\ncp ${configFile} config.def.h\n";
       });
     })
+
+    # nix-direnv
+    (self: super: { nix-direnv = super.nix-direnv.override { enableFlakes = true; }; } )
   ];
 
   fonts.fonts = with pkgs; [
     source-code-pro
+  ];
+
+  environment.pathsToLink = [
+    "/share/nix-direnv"
   ];
 
   # List packages installed in system profile. To search, run:
@@ -278,6 +287,10 @@ in
     inputs.poetry2nix.packages.x86_64-linux.poetry2nix
 	  release2105.dos2unix
 	  # release2105.google-chrome
+
+    # nix-direnv
+    direnv
+    nix-direnv
 
     ## Language servers
     # C/C++
@@ -471,6 +484,10 @@ in
     # KDE utils
     libsForQt5.ark # Archive manager
     calligra # Office stuff
+
+    # Office software
+    beancount
+    fava
 
     # Media players
     vlc # Video
