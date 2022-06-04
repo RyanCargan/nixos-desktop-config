@@ -210,6 +210,16 @@ in
   # services.dbus.packages = with pkgs; [ gnome-keyring ];
   services.gnome.gnome-keyring.enable = true;
 
+  # Database
+  services.postgresql.enable = true;
+  services.postgresql.package = pkgs.postgresql_14;
+  services.postgresql.extraPlugins = with pkgs.postgresql_14.pkgs; [
+    pgtap
+    postgis
+    timescaledb
+    # age
+  ];
+
   # Overlay configuration
   nixpkgs.overlays = [
     (import (builtins.fetchGit {
@@ -277,7 +287,7 @@ in
   # $ nix search wget
   # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   environment.systemPackages = with pkgs; [
-    vim wget firefox kate httrack silver-searcher btop postgresql_14 postgresql14Packages.postgis postgresql14Packages.timescaledb ccache fd ripgrep ripgrep-all git docker yt-dlp obs-studio gron go-org groff direnv elinks fbida texmacs ghostwriter ffmpeg paprefs gparted unetbootin audacity emscripten wasmer nvidia-docker pyspread inkscape neovim calibre root sageWithDoc nyxt nomacs maim yacreader tigervnc aria ghostscript nix-du zgrviewer graphviz google-chrome tor-browser-bundle-bin
+    vim wget firefox kate httrack silver-searcher btop ccache fd ripgrep ripgrep-all git docker yt-dlp obs-studio gron go-org groff direnv elinks fbida texmacs ghostwriter ffmpeg paprefs gparted unetbootin audacity emscripten wasmer nvidia-docker pyspread inkscape neovim calibre root sageWithDoc nyxt nomacs maim yacreader tigervnc aria ghostscript nix-du zgrviewer graphviz google-chrome tor-browser-bundle-bin
 
     # Package packs
     # RStudio-with-my-packages
@@ -381,6 +391,7 @@ in
     #cudnn_cudatoolkit_11_2 # NVIDIA CUDA Deep Neural Network library (CUDA 11.2 + cuDNN 8.1.1 for TensorFlow 2.7.0 compat)
     git-lfs # Git extension for versioning large files
     gcc # GNU Compiler Collection, version 10.3.0 (wrapper script)
+    libgccjit
     gnumake # A tool to control the generation of non-source files from sources
     pkg-config
     mdk # GNU MIX Development Kit (MDK)
