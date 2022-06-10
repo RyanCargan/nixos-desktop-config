@@ -400,6 +400,8 @@ in
     chicken # A portable compiler for the Scheme programming language
     # renpy # Ren'Py Visual Novel Engine
     nwjs-sdk # An app runtime based on Chromium and node.js
+    arrayfire
+    forge
 
     # Source code explorer & deps
     # tomcat10 opengrok
