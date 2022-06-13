@@ -341,6 +341,7 @@ in
     #unstable.go_1_18
     sass
     ungoogled-chromium
+    postman
 
     # Android Dev
     android-studio
