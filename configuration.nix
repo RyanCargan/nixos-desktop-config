@@ -302,6 +302,9 @@ in
     direnv
     nix-direnv
 
+    # Educational software
+    anki-bin
+
     ## Language servers
     # C/C++
     ccls
