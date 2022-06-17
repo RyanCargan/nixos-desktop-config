@@ -484,6 +484,9 @@ in
     zip # Compressor/archiver for creating and modifying zipfiles
     unrar
 
+    # Doc utils
+    pandoc
+
     # Terminals
     hyper
 
