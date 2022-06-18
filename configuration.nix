@@ -528,8 +528,9 @@ in
     jmtpfs
 
     # JVM
-    adoptopenjdk-bin
-    (sbt.override { jre = pkgs.adoptopenjdk-bin; })
+    # adoptopenjdk-bin
+    adoptopenjdk-hotspot-bin-16
+    (sbt.override { jre = pkgs.adoptopenjdk-hotspot-bin-16; })
 
     # Python 3
     (let
