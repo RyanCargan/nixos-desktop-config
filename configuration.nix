@@ -283,6 +283,10 @@ in
     "/share/nix-direnv"
   ];
 
+  environment.variables = {
+    JAVA_HOME = "pkgs.adoptopenjdk-hotspot-bin-16";
+  };
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
@@ -335,6 +339,7 @@ in
 
     # Editors
     apostrophe # Markdown
+    jetbrains.idea-community # Java
 
     # Web Dev
     unstable.deno
