@@ -345,6 +345,7 @@ in
     zoom-us
 
     # Editors
+    marktext # Markdown
     apostrophe # Markdown
     jetbrains.idea-community # Java
 
