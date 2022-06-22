@@ -309,6 +309,13 @@ in
     # Educational software
     anki-bin
 
+    # Audio & video comms
+    droidcam
+    mumble
+    murmur
+    iproute2
+    jq
+
     ## Language servers
     # C/C++
     ccls
