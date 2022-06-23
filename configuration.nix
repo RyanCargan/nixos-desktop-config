@@ -187,7 +187,7 @@ in
   sound.enable = true;
   hardware.pulseaudio.package = pkgs.pulseaudioFull;
   hardware.pulseaudio.enable = true;
-  # hardware.pulseaudio.support32Bit = true;
+  hardware.pulseaudio.support32Bit = true;
   nixpkgs.config.pulseaudio = true;
 
   # Paprefs fix.
