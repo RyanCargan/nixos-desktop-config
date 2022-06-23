@@ -285,6 +285,18 @@ in
 
     # nix-direnv
     (self: super: { nix-direnv = super.nix-direnv.override { enableFlakes = true; }; } )
+
+    # pulseaudio
+    #(self: super: {
+    #  pulseaudio = super.pulseaudio.overrideattrs (
+    #    _: { nativebuildinputs = [ pkg-config meson ninja makewrapper perlpackages.perl perlpackages.xmlparser m4 ]
+    #                            ++ lib.optionals stdenv.islinux [ glib ]
+    #                            ++ lib.optional (bluetoothsupport && advancedbluetoothcodecs);}
+    #  );
+    #})
+    #pulseaudio.overrideAttrs (prev: {
+    #  nativeBuildInputs = utils.removePackagesByName prev.nativeBuildInputs [ wrapGAppsHook ];
+    #})
   ];
 
   fonts.fonts = with pkgs; [
