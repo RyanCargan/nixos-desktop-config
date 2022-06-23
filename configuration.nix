@@ -221,6 +221,7 @@ in
   ];
 
   # Mic
+  programs.droidcam.enable = true;
   services.murmur.enable = true;
   services.avahi = {
     enable = true;
@@ -321,7 +322,7 @@ in
     anki-bin
 
     # Audio & video comms
-    droidcam
+    # droidcam
     (mumble.override { pulseSupport = true; })
     # murmur
     iproute2
