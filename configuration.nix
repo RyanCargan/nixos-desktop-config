@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, inputs, ... }:
+{ config, pkgs, inputs, utils, ... }:
 with pkgs;
 let
   system = "x86_64-linux";
@@ -185,7 +185,7 @@ in
 
   # Enable sound.
   sound.enable = true;
-  hardware.pulseaudio.package = pkgs.pulseaudioFull;
+  hardware.pulseaudio.package = pkgs.pulseaudioFull.overrideAttrs (prev: { nativeBuildInputs = utils.removePackagesByName prev.nativeBuildInputs [ wrapGAppsHook ]; });
   hardware.pulseaudio.enable = true;
   hardware.pulseaudio.support32Bit = true;
   nixpkgs.config.pulseaudio = true;
