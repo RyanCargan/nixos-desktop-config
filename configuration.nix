@@ -220,6 +220,17 @@ in
     # age
   ];
 
+  # Mic
+  services.murmur.enable = true;
+  services.avahi = {
+    enable = true;
+    #publish = {
+    #  enable = true;
+    #  address = true;
+    #  workstation = true;
+    #};
+  };
+
   # Overlay configuration
   nixpkgs.overlays = [
     (import (builtins.fetchGit {
@@ -311,8 +322,8 @@ in
 
     # Audio & video comms
     droidcam
-    mumble
-    murmur
+    (mumble.override { pulseSupport = true; })
+    # murmur
     iproute2
     jq
 
