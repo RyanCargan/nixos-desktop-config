@@ -189,7 +189,7 @@ in
   # hardware.pulseaudio.package = pkgs.pulseaudioFull;
   hardware.pulseaudio.enable = true;
   hardware.pulseaudio.support32Bit = true;
-  # nixpkgs.config.pulseaudio = true;
+  nixpkgs.config.pulseaudio = true;
 
   # Remove sound.enable or turn it off if you had it set previously, it seems to cause conflicts with pipewire
   #sound.enable = false;
@@ -431,6 +431,7 @@ in
 
     # Xorg tools
     xorg.xmessage
+    xorg.xev
 
     # Steam tools
     protontricks
