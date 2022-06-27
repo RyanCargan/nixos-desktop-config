@@ -432,6 +432,7 @@ in
     # Xorg tools
     xorg.xmessage
     xorg.xev
+    xorg.xmodmap
 
     # Steam tools
     protontricks
