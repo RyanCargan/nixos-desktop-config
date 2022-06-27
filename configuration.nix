@@ -271,12 +271,16 @@ in
             # url = "https://dwm.suckless.org/patches/systray/dwm-systray-6.0.diff";
             # sha256 = "1k95j0c9gzz15k0v307zlvkk3fbayb9kid68i27idawg2salrz54";
            url = "https://dwm.suckless.org/patches/systray/dwm-systray-6.3.diff";
-           sha256 = "1plzfi5l8zwgr8zfjmzilpv43n248n4178j98qdbwpgb4r793mdj"; 
+           sha256 = "1plzfi5l8zwgr8zfjmzilpv43n248n4178j98qdbwpgb4r793mdj";
           })
+          #(super.fetchpatch {
+          # url = "https://dwm.suckless.org/patches/swaptags/dwm-swaptags-6.2.diff";
+          # sha256 = "11f9c582a3xm6c7z4k7zmflisljmqbcihnzfkiz9r65m4089kv0g";
+          #})
           (super.fetchpatch {
-           url = "https://dwm.suckless.org/patches/swaptags/dwm-swaptags-6.2.diff";
-           sha256 = "11f9c582a3xm6c7z4k7zmflisljmqbcihnzfkiz9r65m4089kv0g"; 
-          })   
+            url = "https://raw.githubusercontent.com/RyanCargan/dwm/main/patches/dwm-custom-6.3.diff";
+            sha256 = "116jf166rv9w1qyg1d52sva8f1hzpg3lij9m16izz5s8y0742hy7";
+          })
         ];
         # configFile = super.writeText "config.h" (builtins.readFile ./dwm-config.h);
         # postPatch = oa.postPatch or "" + "\necho 'Using own config file...'\n cp ${configFile} config.def.h";
