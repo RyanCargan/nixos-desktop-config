@@ -30,6 +30,10 @@ in
         config = config.nixpkgs.config;
         inherit system;
       };
+      release2111 = import inputs.release2111 {
+        config = config.nixpkgs.config;
+        inherit system;
+      };
       unstable = import inputs.unstable {
         config = config.nixpkgs.config;
         inherit system;
@@ -459,7 +463,7 @@ in
     racket # A programmable programming language
     # mozart2 # An open source implementation of Oz 3
     chicken # A portable compiler for the Scheme programming language
-    # renpy # Ren'Py Visual Novel Engine
+    release2111.renpy # Ren'Py Visual Novel Engine
     nwjs-sdk # An app runtime based on Chromium and node.js
     arrayfire
     forge
