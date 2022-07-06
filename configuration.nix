@@ -547,6 +547,7 @@ in
 
     # Doc utils
     pandoc
+    vale
 
     # Terminals
     hyper
