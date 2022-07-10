@@ -755,7 +755,9 @@ in
     # vscode-with-extensions
 
     # Overlays
-    emacsGcc
+    ((emacsPackagesFor emacsGcc).emacsWithPackages (epkgs: [
+      epkgs.emacspeak
+    ]))
     wine
   ];
 
