@@ -221,7 +221,9 @@ in
   # };
 
   # Overlay setup
-  services.emacs.package = pkgs.emacsGcc;
+  services.emacs.package = with pkgs; ((emacsPackagesFor emacsGcc).emacsWithPackages (epkgs: [
+    epkgs.emacspeak
+  ]));
   # services.emacs.enable = true; # Optional emacs daemon/server mode.
 
   # D-Bus
