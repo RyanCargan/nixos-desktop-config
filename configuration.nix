@@ -222,7 +222,7 @@ in
 
   # Overlay setup
   services.emacs.package = with pkgs; ((emacsPackagesFor emacsGcc).emacsWithPackages (epkgs: [
-    epkgs.emacspeak
+    # epkgs.emacspeak
   ]));
   # services.emacs.enable = true; # Optional emacs daemon/server mode.
 
@@ -506,6 +506,9 @@ in
     mkvtoolnix
 
     # Emacs deps
+    espeak-classic
+    tcl
+    tclx
     libtool
     libvterm-neovim
     texlive.combined.scheme-full
@@ -756,7 +759,7 @@ in
 
     # Overlays
     ((emacsPackagesFor emacsGcc).emacsWithPackages (epkgs: [
-      epkgs.emacspeak
+      # epkgs.emacspeak
     ]))
     wine
   ];
