@@ -419,6 +419,9 @@ in
     #Sys Dev
     nixos-option
 
+    # Data analysis
+    pspp
+
     # VPS
     mosh
     sshfs
