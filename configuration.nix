@@ -264,6 +264,9 @@ in
     (self: super: {
       wine = super.wineWowPackages.stableFull;
     })
+    #(self: super: {
+    #  winetricks = super.wine.wineWowPackages.stableFull;
+    #})
   
     # dwm
     (self: super: {
@@ -391,6 +394,7 @@ in
 
     # Comm utils
     zoom-us
+    anydesk
 
     # Editors
     marktext # Markdown
@@ -504,9 +508,12 @@ in
     libnotify
     dunst
     mkvtoolnix
+    poppler_utils
+    # xpdf # Insecure
 
     # Emacs deps
     espeak-classic
+    speechd
     tcl
     tclx
     libtool
@@ -553,6 +560,7 @@ in
     # Doc utils
     pandoc
     vale
+    gephi
 
     # Terminals
     hyper
@@ -617,6 +625,12 @@ in
         pyzmq
         # Sci-Comp Tools
         jupyterlab pytorch scikit-learn numba jax jaxlib transformers tokenizers fasttext numpy scipy sympy matplotlib pandas scikitimage statsmodels scikits-odes traittypes xarray
+        # Scraping Tools
+        selenium
+        beautifulsoup4
+        folium
+        lxml
+        # Misc
         pip
         pyside2
         pyside2-tools
@@ -626,6 +640,7 @@ in
         pillow
         virtual-display
         EasyProcess
+        pdftotext
         # Web-Dev Tools
         fastapi sqlalchemy sqlalchemy-utils sqlalchemy-migrate sqlalchemy-jsonfield sqlalchemy-i18n sqlalchemy-citext alembic ColanderAlchemy
         # General tools
@@ -762,6 +777,7 @@ in
       # epkgs.emacspeak
     ]))
     wine
+    winetricks
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
