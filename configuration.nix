@@ -395,6 +395,7 @@ in
     # Comm utils
     zoom-us
     anydesk
+    torsocks
 
     # Editors
     marktext # Markdown
