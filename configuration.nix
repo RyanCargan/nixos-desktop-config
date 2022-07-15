@@ -348,7 +348,7 @@ in
     # RStudio-with-my-packages
 
     # Flakes
-    inputs.blender.packages.x86_64-linux.blender_3_1
+    inputs.blender.packages.x86_64-linux.blender_3_2
     inputs.poetry2nix.packages.x86_64-linux.poetry2nix
 	  release2105.dos2unix
 	  # release2105.google-chrome
@@ -396,6 +396,7 @@ in
     zoom-us
     anydesk
     torsocks
+    tor
 
     # Editors
     marktext # Markdown
@@ -628,7 +629,8 @@ in
         inkex
         pyzmq
         # Sci-Comp Tools
-        jupyterlab pytorch scikit-learn numba jax jaxlib transformers tokenizers fasttext numpy scipy sympy matplotlib pandas scikitimage statsmodels scikits-odes traittypes xarray
+        # jupyterlab
+        pytorch scikit-learn numba jax jaxlib transformers tokenizers fasttext numpy scipy sympy matplotlib pandas scikitimage statsmodels scikits-odes traittypes xarray
         # Scraping Tools
         selenium
         beautifulsoup4
@@ -686,7 +688,7 @@ in
     cmake
     # cmakeWithGui
     ninja
-    conan
+    # conan
     # Clang
     clang_14
     lldb_14
