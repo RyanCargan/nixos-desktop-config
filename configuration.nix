@@ -367,6 +367,10 @@ in
     iproute2
     jq
 
+    # Audio utils
+    reaper
+    sonic-pi
+
     ## Language servers
     # C/C++
     ccls
@@ -781,6 +785,7 @@ in
     # Overlays
     ((emacsPackagesFor emacsGcc).emacsWithPackages (epkgs: [
       # epkgs.emacspeak
+      epkgs.sonic-pi
     ]))
     wine
     winetricks
