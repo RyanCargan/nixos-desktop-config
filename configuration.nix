@@ -570,6 +570,7 @@ in
     pandoc
     vale
     gephi
+    abiword
 
     # Terminals
     hyper
