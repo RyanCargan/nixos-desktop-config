@@ -745,6 +745,7 @@ in
     # Node
     nodejs-16_x
     nodePackages.pnpm
+    nodePackages.yarn
     nodePackages.node-gyp
     nodePackages.node-gyp-build
 
