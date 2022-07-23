@@ -144,6 +144,15 @@ in
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ 631 5901 80 443 ];
 
+  # Enable K3s
+  networking.firewall.allowedTCPPorts = [ 6443 ];
+  services.k3s.enable = true;
+  services.k3s.role = "server";
+  # services.k3s.role = "agent";
+  services.k3s.extraFlags = toString [
+    # "--kubelet-arg=v=4" # Optionally add additional args to k3s
+  ];
+
   # Enable NVIDIA drivers
   services.xserver.videoDrivers = [ "nvidia" ];
   hardware.opengl = {
@@ -421,6 +430,7 @@ in
     android-studio
     wmname # Java app GUI issue fix
     android-tools
+    watchman
 
     #Sys Dev
     nixos-option
@@ -431,6 +441,7 @@ in
     # VPS
     mosh
     sshfs
+    k3s
 
     # Weird stuff
     eaglemode
@@ -519,6 +530,8 @@ in
     mkvtoolnix
     poppler_utils
     # xpdf # Insecure
+    ksnip
+    flameshot
 
     # Emacs deps
     espeak-classic
@@ -745,7 +758,7 @@ in
     # Node
     nodejs-16_x
     nodePackages.pnpm
-    # nodePackages.yarn
+    nodePackages.yarn
     nodePackages.node-gyp
     nodePackages.node-gyp-build
 
