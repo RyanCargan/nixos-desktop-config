@@ -22,6 +22,7 @@ in
       keep-outputs = true
       keep-derivations = true
     '';
+    registry.nixpkgs.flake = inputs.nixpkgs;
   };
 
   nixpkgs.config = {
@@ -359,8 +360,8 @@ in
     # Flakes
     inputs.blender.packages.x86_64-linux.blender_3_2
     inputs.poetry2nix.packages.x86_64-linux.poetry2nix
-	  release2105.dos2unix
-	  # release2105.google-chrome
+	release2105.dos2unix
+	# release2105.google-chrome
 
     # nix-direnv
     direnv
@@ -415,6 +416,8 @@ in
     marktext # Markdown
     apostrophe # Markdown
     jetbrains.idea-community # Java
+    languagetool
+    vale
 
     # Web Dev
     unstable.deno
@@ -671,6 +674,7 @@ in
         pipx
         # Testing tools
         pytest
+        loguru
       ];
       python-with-my-packages = python39.withPackages my-python-packages;
     in
@@ -801,6 +805,7 @@ in
     ((emacsPackagesFor emacsGcc).emacsWithPackages (epkgs: [
       # epkgs.emacspeak
       epkgs.sonic-pi
+      epkgs.languagetool
     ]))
     wine
     winetricks
