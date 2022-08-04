@@ -16,7 +16,7 @@ in
     ];
 
   nix = {
-    package = pkgs.nix_2_4; # Potential attributes are nix_2_4 nixFlakes nixUnstable
+    package = pkgs.nix_2_4; # Potential attributes are nix_2_x nixFlakes nixUnstable
     extraOptions = ''
       experimental-features = nix-command flakes
       keep-outputs = true
