@@ -651,7 +651,10 @@ in
         pyzmq
         # Sci-Comp Tools
         # jupyterlab
-        pytorch scikit-learn numba jax objax flax jaxlib transformers tokenizers fasttext numpy scipy sympy matplotlib pandas scikitimage statsmodels scikits-odes traittypes xarray
+        pytorch scikit-learn numba jax objax flax transformers tokenizers fasttext numpy scipy sympy matplotlib pandas scikitimage statsmodels scikits-odes traittypes xarray
+        jaxlib
+        # (jaxlib.override {cudaSupport = true;}) # Same as jaxlibWithCuda
+        # (jaxlib.override {cudaSupport = true; cudaPackages = cudaPackages_11_2;})
         # Scraping Tools
         selenium
         beautifulsoup4
