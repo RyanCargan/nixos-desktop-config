@@ -651,7 +651,7 @@ in
         pyzmq
         # Sci-Comp Tools
         # jupyterlab
-        pytorch scikit-learn numba jax jaxlib transformers tokenizers fasttext numpy scipy sympy matplotlib pandas scikitimage statsmodels scikits-odes traittypes xarray
+        pytorch scikit-learn numba jax objax flax jaxlib transformers tokenizers fasttext numpy scipy sympy matplotlib pandas scikitimage statsmodels scikits-odes traittypes xarray
         # Scraping Tools
         selenium
         beautifulsoup4
@@ -670,6 +670,8 @@ in
         pdftotext
         # Web-Dev Tools
         fastapi sqlalchemy sqlalchemy-utils sqlalchemy-migrate sqlalchemy-jsonfield sqlalchemy-i18n sqlalchemy-citext alembic ColanderAlchemy
+        # Game Dev Tools
+        pybullet pygame pyglet
         # General tools
         pipx
         # Testing tools
