@@ -651,7 +651,8 @@ in
         pyzmq
         # Sci-Comp Tools
         # jupyterlab
-        pytorch scikit-learn numba jax objax optax flax transformers tokenizers fasttext numpy scipy sympy matplotlib pandas scikitimage statsmodels scikits-odes traittypes xarray
+        (pytorch.override {cudaSupport = true; cudaPackages = cudaPackages_11_6;})
+        scikit-learn numba jax objax optax flax transformers tokenizers fasttext numpy scipy sympy matplotlib pandas scikitimage statsmodels scikits-odes traittypes xarray
         # jaxlib
         # (jaxlib.override {cudaSupport = true;}) # Same as jaxlibWithCuda
         (jaxlib.override {cudaSupport = true; cudaPackages = cudaPackages_11_6;})
