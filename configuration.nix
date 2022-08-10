@@ -581,6 +581,7 @@ in
     bat # A cat(1) clone with syntax highlighting and Git integration
     zip # Compressor/archiver for creating and modifying zipfiles
     unrar
+    ncdu_2
 
     # Doc utils
     pandoc
