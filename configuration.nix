@@ -381,6 +381,9 @@ in
     reaper
     sonic-pi
 
+    # Haskell
+    stack
+
     ## Language servers
     # C/C++
     ccls
@@ -695,6 +698,19 @@ in
     #   python2-with-my-packages = python27.withPackages my-python2-packages;
     # in
     # python2-with-my-packages)
+
+    # Haskell
+    #(let
+    #  my-haskell-packages = haskellPackages: with haskellPackages; [
+    #                  # libraries
+    #                  arrows async cgi criterion
+    #                  # tools
+    #                  stack haskintex cabal-install
+    #                ];
+                    # haskell-with-my-packages = unstable.haskell.packages.ghc941.ghcWithPackages my-haskell-packages;
+    #                haskell-with-my-packages = unstable.haskell.packages.ghc923.ghcWithHoogle my-haskell-packages; # unstable.haskell also works
+    #in
+    #haskell-with-my-packages)
 
     # ML Tools
     fasttext
