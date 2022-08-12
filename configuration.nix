@@ -647,7 +647,7 @@ in
         flask flask_wtf flask_mail flask_login flask_assets flask-sslify flask-silk flask-restx flask-openid flask-cors flask-common flask-bcrypt flask-babel flask-api flask-admin flask_sqlalchemy flask_migrate
         fire
         typer
-        pytest
+        # pytest
         poetry
         poetry2conda
         nixpkgs-pytools
@@ -688,6 +688,7 @@ in
         pipx
         # Testing tools
         pytest
+        pytest-benchmark
         loguru
       ];
       python-with-my-packages = python39.withPackages my-python-packages;
