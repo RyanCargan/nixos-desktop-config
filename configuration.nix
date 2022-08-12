@@ -152,6 +152,7 @@ in
   # services.k3s.role = "agent";
   services.k3s.extraFlags = toString [
     # "--kubelet-arg=v=4" # Optionally add additional args to k3s
+    "--no-deploy traefik --write-kubeconfig-mode 644 --node-name k3s-master-01"
   ];
 
   # Enable NVIDIA drivers
@@ -656,10 +657,13 @@ in
         # Sci-Comp Tools
         # jupyterlab
         (pytorch.override {cudaSupport = true; cudaPackages = cudaPackages_11_6;})
-        scikit-learn numba jax objax optax flax transformers tokenizers fasttext numpy scipy sympy matplotlib pandas scikitimage statsmodels scikits-odes traittypes xarray
+        scikit-learn jax objax optax flax transformers tokenizers fasttext numpy scipy sympy matplotlib pandas scikitimage statsmodels scikits-odes traittypes xarray
+        unstable.python39Packages.optuna
         # jaxlib
         # (jaxlib.override {cudaSupport = true;}) # Same as jaxlibWithCuda
         (jaxlib.override {cudaSupport = true; cudaPackages = cudaPackages_11_6;})
+        (numba.override {cudaSupport = true; cudaPackages = cudaPackages_11_6;})
+        (cupy.override {cudaPackages = cudaPackages_11_6;})
         # Scraping Tools
         selenium
         beautifulsoup4
@@ -705,7 +709,7 @@ in
                       # libraries
                       arrows async cgi criterion
                       # tools
-                      stack haskintex cabal-install
+                      stack haskintex cabal-install hlint
                     ];
     #                 haskell-with-my-packages = unstable.haskell.packages.ghc941.ghcWithPackages my-haskell-packages;
                      haskell-with-my-packages = haskell.packages.ghc902.ghcWithHoogle my-haskell-packages; # unstable.haskell also works
