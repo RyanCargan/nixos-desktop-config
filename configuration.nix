@@ -592,6 +592,7 @@ in
     vale
     gephi
     abiword
+    gnum4
 
     # Terminals
     hyper
@@ -664,11 +665,17 @@ in
         (jaxlib.override {cudaSupport = true; cudaPackages = cudaPackages_11_6;})
         (numba.override {cudaSupport = true; cudaPackages = cudaPackages_11_6;})
         (cupy.override {cudaPackages = cudaPackages_11_6;})
+        (tensorflow.override {cudaSupport = true; cudaPackages = cudaPackages_11_6;})
+        spacy
+        pytesseract
         # Scraping Tools
         selenium
         beautifulsoup4
         folium
         lxml
+        yarl
+        networkx
+        faker
         # Misc
         pip
         pyside2
