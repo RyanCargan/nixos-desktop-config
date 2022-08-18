@@ -70,6 +70,7 @@ in
          "wheel" "libvirtd" "qemu-libvirtd"
          "audio" "video" "networkmanager"
          "vglusers"
+         "lxd"
        ];
      group = "users";
      home = "/home/ryan";
@@ -92,7 +93,7 @@ in
   # Enable virtualization.
   virtualisation.libvirtd.enable = true;
   boot.extraModprobeConfig = "options kvm_amd nested=1"; # Nested virtualization (requires AMD-V).
-#   virtualisation.lxd.enable = true;
+  virtualisation.lxd.enable = true;
   virtualisation.docker.enable = true;
   virtualisation.docker.enableNvidia = true;
   # boot.kernelModules = [ "kvm-amd" "kvm-intel" ]; # Only needed if kvm-amd/intel is not set in hardware-configuration.nix AFAIK.
