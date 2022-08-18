@@ -147,13 +147,13 @@ in
 
   # Enable K3s
   networking.firewall.allowedTCPPorts = [ 6443 ];
-  services.k3s.enable = true;
-  services.k3s.role = "server";
+  # services.k3s.enable = false;
+  # services.k3s.role = "server";
   # services.k3s.role = "agent";
-  services.k3s.extraFlags = toString [
+  # services.k3s.extraFlags = toString [
     # "--kubelet-arg=v=4" # Optionally add additional args to k3s
-    "--no-deploy traefik --write-kubeconfig-mode 644 --node-name k3s-master-01"
-  ];
+    # "--no-deploy traefik --write-kubeconfig-mode 644 --node-name k3s-master-01"
+  # ];
 
   # Enable NVIDIA drivers
   services.xserver.videoDrivers = [ "nvidia" ];
@@ -448,7 +448,7 @@ in
     # VPS
     mosh
     sshfs
-    k3s
+    # k3s
 
     # Weird stuff
     eaglemode
