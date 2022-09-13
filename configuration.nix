@@ -93,7 +93,7 @@ in
   # Enable virtualization.
   virtualisation.libvirtd.enable = true;
   boot.extraModprobeConfig = "options kvm_amd nested=1"; # Nested virtualization (requires AMD-V).
-  virtualisation.lxd.enable = true;
+  virtualisation.lxd.enable = false;
   virtualisation.docker.enable = true;
   virtualisation.docker.enableNvidia = true;
   # boot.kernelModules = [ "kvm-amd" "kvm-intel" ]; # Only needed if kvm-amd/intel is not set in hardware-configuration.nix AFAIK.
@@ -587,6 +587,8 @@ in
     zip # Compressor/archiver for creating and modifying zipfiles
     unrar
     ncdu_2
+    subversion
+
 
     # Doc utils
     pandoc
