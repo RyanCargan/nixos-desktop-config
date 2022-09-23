@@ -750,6 +750,7 @@ in
     wasm-pack
 
     # C++
+    cling
     cppzmq
     uncrustify
     cmake
