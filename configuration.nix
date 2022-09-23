@@ -588,7 +588,7 @@ in
     unrar
     ncdu_2
     subversion
-
+    trash-cli
 
     # Doc utils
     pandoc
@@ -641,6 +641,7 @@ in
     # adoptopenjdk-bin
     adoptopenjdk-hotspot-bin-16
     (sbt.override { jre = pkgs.adoptopenjdk-hotspot-bin-16; })
+    jbang
 
     # Python 3
     (let
@@ -696,6 +697,7 @@ in
         pybullet pygame pyglet
         # General tools
         pipx
+        sh
         # Testing tools
         pytest
         pytest-benchmark
@@ -726,6 +728,11 @@ in
                      haskell-with-my-packages = haskell.packages.ghc902.ghcWithHoogle my-haskell-packages; # unstable.haskell also works
     in
     haskell-with-my-packages)
+
+    # Containers
+    kube3d
+    kubectl
+    kubernetes-helm
 
     # ML Tools
     fasttext
