@@ -423,6 +423,7 @@ in
     jetbrains.idea-community # Java
     languagetool
     vale
+    obsidian
 
     # Web Dev
     unstable.deno
