@@ -590,6 +590,7 @@ in
     ncdu_2
     subversion
     trash-cli
+    nmap
 
     # Doc utils
     pandoc
