@@ -555,6 +555,7 @@ in
     mplayer
 
     # Sys utils
+    teams
     st
     xterm
     # yaft # Buggy
@@ -598,6 +599,8 @@ in
     gephi
     abiword
     gnum4
+    zotero
+    qnotero
 
     # Terminals
     hyper
