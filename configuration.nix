@@ -596,6 +596,8 @@ in
     subversion
     trash-cli
     nmap
+    unzip
+    newt
 
     # Doc utils
     pandoc
