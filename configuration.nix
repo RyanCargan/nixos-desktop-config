@@ -843,6 +843,9 @@ in
     #   ];
     # })
 
+    # Games
+    cataclysm-dda
+
     # TBI
     # pgadmin # openssl issue here (good chance to test sed & awk).
     # discord / betterdiscordctl
