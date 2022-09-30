@@ -435,6 +435,10 @@ in
     ungoogled-chromium
     postman
 
+    # Fun stuff
+    duktape
+    kotlin
+
     # Android Dev
     android-studio
     wmname # Java app GUI issue fix
