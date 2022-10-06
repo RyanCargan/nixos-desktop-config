@@ -252,6 +252,12 @@ in
     # age
   ];
 
+  #-------------------------------------------------------------------------
+  # Enable redis service
+  #-------------------------------------------------------------------------
+  services.redis.servers."talos".enable=true;
+  services.redis.servers."talos".port=6379;
+
   # Mic
   programs.droidcam.enable = true;
   services.murmur.enable = true;
@@ -598,6 +604,7 @@ in
     nmap
     unzip
     newt
+    gnupg
 
     # Doc utils
     pandoc
