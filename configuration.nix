@@ -440,6 +440,7 @@ in
     sass
     ungoogled-chromium
     postman
+    insomnia
 
     # Fun stuff
     duktape
