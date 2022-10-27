@@ -220,6 +220,10 @@ in
     #jack.enable = true;
   #};
 
+  # Enable Bluetooth
+  hardware.bluetooth.enable = false;
+  services.blueman.enable = false;
+
   # Paprefs fix.
   programs.dconf.enable = true; # + gnome3.dconf
 
@@ -441,6 +445,7 @@ in
     ungoogled-chromium
     postman
     insomnia
+    mkcert
 
     # Fun stuff
     duktape
@@ -606,6 +611,10 @@ in
     unzip
     newt
     gnupg
+    xfsprogs
+
+    # Bluetooth
+    # obexftp
 
     # Doc utils
     pandoc
