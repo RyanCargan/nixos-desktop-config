@@ -612,6 +612,7 @@ in
     newt
     gnupg
     xfsprogs
+    parted
 
     # Bluetooth
     # obexftp
